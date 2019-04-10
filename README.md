@@ -37,6 +37,20 @@ node-swagger-models : {
 ...
 ```
 
+node-swagger-models nsmconfig.js
+
+nsmconfig.js
+```
+// Using a js config allows for custom formatters
+module.exports = {
+  "fileOutput": "./tmp",
+  "api": "http://localhost:1802/api-docs/v1/swagger.json",
+  "format": function(type, urlRoot, modelName, model, scriptModel, scriptValidation) {
+    return ['module.exports = {', scriptModel.join('\n'), '};']
+  }
+}
+```
+
 ## Notes
 
 There is support for a vender extension on the swagger schemadefintion.  
