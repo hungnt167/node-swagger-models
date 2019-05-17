@@ -1,5 +1,5 @@
 {
   "fileOutput": "./tmp",
-  "api": "http://localhost:1802/api-docs/v1/swagger.json",
-  "format": "backbone"
+  "api": "https://devdocs.magento.com/swagger/schemas/latest-2.2.schema.json",
+  "format": "typescript"
 }
